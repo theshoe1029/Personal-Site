@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 var projects = [
   {
     title: "Hype Shark",
-    src: "/images/hello-world.png"
+    src: "/images/hype-shark.png"
   },
   {
     title: "Circuitry",
-    src: "/images/hello-world.png"
+    src: "/images/circuitry.png"
   },
   {
     title: "Hello World",
@@ -17,11 +17,11 @@ var projects = [
   },
   {
     title: "Power Wheels",
-    src: "/images/hello-world.png"
+    src: "/images/power-wheels.png"
   },
   {
     title: "Dispatched",
-    src: "/images/hello-world.png"
+    src: "/images/dispatched.png"
   }
 ]
 
