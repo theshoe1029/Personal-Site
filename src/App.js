@@ -1,8 +1,13 @@
 import React from 'react';
 import Style from 'style-it';
 
-var colorLight = '#ff4747';
-var colorDark = '#d81313';
+var themes = [
+  {colorLight:'#ff4747', colorDark:'#d81313'},
+  {colorLight:'#00a508', colorDark:'#008206'},
+  {colorLight:'#cc6bff', colorDark:'#b523ff'}
+]
+
+var theme = themes[Math.floor(Math.random() * (themes.length))];
 
 class App extends React.Component {
   constructor(props){
@@ -21,50 +26,23 @@ class App extends React.Component {
   }
 
   render() {
-    switch(this.state.page){
-      case 'projects':
-        colorLight = '#ff4747'
-        colorDark = '#d81313'
-        break
-      case 'about':
-        colorLight = '#00a508'
-        colorDark = '#008206'
-        break
-      case 'contact':
-        colorLight = '#cc6bff'
-        colorDark = '#b523ff'
-        break
-    }
 
     var navStyle = {
-      backgroundColor: colorLight,
-      borderBottom: '0.25rem solid ' + colorDark
+      backgroundColor: theme.colorLight,
+      borderBottom: '0.25rem solid ' + theme.colorDark
     }
 
-    var linkStyle = {color: colorLight}
+    var linkStyle = {color: theme.colorLight}
 
     return (
       <div>
-        <nav className="navbar" id="navigation" style={navStyle}>
-          <h2>Adam Schueller</h2>
+        <a id="resume-link" href="/Resume.pdf" target="_">
+          <nav className="navbar" id="navigation" style={navStyle}>
+            <h2 className="mx-auto">Adam Schueller</h2>
+          </nav>
+        </a>  
 
-          <ul className="nav justify-content-end">
-            <li className="nav-item">
-              <p className="nav-link" onClick={()=>this.handleClick("projects")}>Projects</p>
-            </li>
-            <li className="nav-item">
-              <p className="nav-link" onClick={()=>this.handleClick("about")}>About</p>
-            </li>
-            <li className="nav-item">
-              <p className="nav-link" onClick={()=>this.handleClick("contact")}>Contact</p>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/Resume.pdf" target="_">Resume</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div className="container">
+        <div id="projects" className="container">
 
         </div>
 

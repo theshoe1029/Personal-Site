@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru');
+
 body {
   margin: 0;
   padding: 0;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+#resume-link{
+  margin: 0;
+  padding: 0;
+}
+
+#resume-link:hover{
+  text-decoration: none;
 }
 
 #navigation{
@@ -26,6 +37,29 @@ body {
 
 #navigation a:hover{
   text-decoration: none;
+}
+
+#projects-header{
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#projects{
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.project-image{
+  border-radius: 0.5rem;
+  width: 290px;
+  height: 195px;
+}
+
+.project-title{
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 1.65rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
 }
 
 footer {
