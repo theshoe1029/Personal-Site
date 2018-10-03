@@ -1,5 +1,4 @@
 import React from 'react';
-import Style from 'style-it';
 
 var colorLight = '#cc6bff'
 var colorDark = '#b523ff'
@@ -33,7 +32,7 @@ class App extends React.Component {
       <div>
         <a id="resume-link" href="/Resume.pdf" target="_">
           <nav className="navbar" id="navigation" style={navStyle}>
-            <h2 className="mx-auto">Adam Schueller</h2>
+            <h2 className="mx-auto text-center">Adam Schueller</h2>
           </nav>
         </a>
 
@@ -43,7 +42,7 @@ class App extends React.Component {
 
         <footer className="bg-light" id="footer">
           <div id="footer-div">
-            <a href="mailto:as174@rice.edu" style={linkStyle}><i className="far fa-envelope align-middle"></i></a>            
+            <a href="mailto:as174@rice.edu" style={linkStyle}><i className="far fa-envelope align-middle"></i></a>
             <a href="https://www.linkedin.com/in/adam-schueller/" style={linkStyle}><i className="fab fa-linkedin-in align-middle"></i></a>
             <a href="https://github.com/theshoe1029" style={linkStyle}><i className="fab fa-github-alt align-middle"></i></a>
           </div>

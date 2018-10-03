@@ -1,14 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
+var $ = require('jquery')
 
 var projects = [
   {
     id: "hype-shark",
     title: "Hype Shark",
     src: "/images/hype-shark.png",
-    description: "Hype Shark is an affordable bot that allows users to buy shoes that are in high demand",
-    link: "https://www.hypeshark.net",
+    description: "Hype Shark is an affordable bot that allows users to buy shoes that are in high demand.",
+    projectLink: "https://www.hypeshark.net",
+    codeLink: null,
     languages: "CSS, HTML, JavaScript, Python",
     tools: "Electron, Express, Heroku, MongoDB, Nightmare.js, Selenium"
   },
@@ -16,8 +16,9 @@ var projects = [
     id: "circuitry",
     title: "Circuitry",
     src: "/images/circuitry.png",
-    description: "Circuitry is a game that allows students to review their knowledge of electricity",
-    link: "https://cs2n.org",
+    description: "Circuitry is a game that allows students to review their knowledge of electricity.",
+    projectLink: "https://circuit-game.cs2n.org",
+    codeLink: null,
     languages: "HTML, JavaScript",
     tools: "CouchDB, Docker, Express, Phaser"
   },
@@ -25,8 +26,9 @@ var projects = [
     id: "hello-world",
     title: "Hello World",
     src: "/images/hello-world.png",
-    description: "Hello World is an app that translates customer service calls in real time",
-    link: "https://github.com/theriley106/capital-one-vocal-identification",
+    description: "Hello World is an app that translates customer service calls in real time.",
+    projectLink: null,
+    codeLink: "https://github.com/theriley106/capital-one-vocal-identification",
     languages: "CSS, HTML, JavaScript, Python",
     tools: "Beautiful Soup, Express, Flask"
   },
@@ -34,8 +36,9 @@ var projects = [
     id: "power-wheels",
     title: "Power Wheels",
     src: "/images/power-wheels.png",
-    description: "For this project I worked with Polygon Robotics to develop an autonomous toy car for the Pittsburgh Maker Faire",
-    link: "https://youtu.be/P3KU7waaMcw",
+    description: "For this project I worked with Polygon Robotics to develop an autonomous toy car for the Pittsburgh Maker Faire.",
+    projectLink: "https://youtu.be/P3KU7waaMcw",
+    codeLink: "https://github.com/theshoe1029/Power-Wheels-Team",
     languages: "Arduino, Python",
     tools: "3D Printer, Laser Cutter, Lidar, PyGame"
   },
@@ -43,61 +46,87 @@ var projects = [
     id: "dispatched",
     title: "Dispatched",
     src: "/images/dispatched.png",
-    description: "Dispatched is a website for visualizing emergency call data",
-    link: "https://github.com/theshoe1029/Dispatched",
+    description: "Dispatched is a website for visualizing emergency call data.",
+    projectLink: null,
+    codeLink: "https://github.com/theshoe1029/Dispatched",
     languages: "CSS, HTML, JavaScript",
     tools: "Chart.js, D3.js, Google Maps API"
   }
 ]
 
+var selectedId = null
+
 class Project extends React.Component {
+
+  openModal = (id) => {
+    document.getElementById(id).style.display="block"
+    selectedId = id
+
+    $(document).keyup(function(e){
+       if (e.keyCode === 27) {
+         document.getElementById(id).style.display="none"
+         selectedId = null
+      }
+    });
+  }
+
+  closeModal = (id) => {
+    document.getElementById(id).style.display="none"
+    selectedId = null
+  }
+
   createProjects = () =>{
     var row = []
     var output = []
 
     while (projects.length > 0){
       var column = []
+      var project = projects[0]
 
-      column.push(<img className="project-image" data-toggle="modal" data-target={"#"+projects[0].id} src={projects[0].src}></img>)
-      column.push(<p className="project-title">{projects[0].title}</p>)
       column.push(
-                  <div className="modal fade project-modal" id={projects[0].id} tabindex="-1" role="dialog" aria-labelledby={projects[0].id+"-label"} aria-hidden="true">
-                    <div className="modal-dialog" role="document">
-                      <div className="modal-content">
-                        <div className="modal-header">
-                          <h4 className="modal-title" id={projects[0].id+"-label"}>{projects[0].title}</h4>
-                          <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div className="modal-body">
-                          <img className="modal-img" src={projects[0].src}></img>
-                          <p className="modal-description">
-                            {projects[0].description}<br/>
-                            <a href={projects[0].link}>{projects[0].link}</a>
-                          </p>
+        <div className="project-square" onClick={this.openModal.bind(this, project.id)}>
+          <img className="project-image text-center" data-toggle="modal" src={project.src} id={project.id+"-image"} alt=""></img>
+          <p className="project-title">{project.title}</p>
+        </div>
+      )
 
-                          <div className="modal-languages">
-                            <h5>Languages Used</h5>
-                            <p>
-                              {projects[0].languages}
-                            </p>
-                          </div>
+      column.push(
+        <div className="project-modal" id={project.id} onClick={this.closeModal.bind(this, project.id)}>
+          <div className="animated zoomIn">
+            <div className="mx-auto text-center">
+              <img className="modal-img" src={project.src}></img>
+            </div>
+            <div className="modal-p-container mx-auto">
+              <p className="modal-p modal-description mx-auto">
+                {project.description}
+              </p>
+            </div>
+            <div className="modal-p-container mx-auto">
+              <p className="modal-p mx-auto">
+                <span className="modal-h text-muted">Languages</span><br/>
+                {project.languages}
+              </p>
+            </div>
+            <div className="modal-p-container mx-auto">
+              <p className="modal-p mx-auto">
+                <span className="modal-h text-muted">Tools & Frameworks</span><br/>
+                {project.tools}
+              </p>
+            </div>
+            <div className="modal-p-container mx-auto">
+              <p className="modal-bottom modal-p mx-auto">
+                <a className="project-link" href={project.projectLink}>{project.projectLink}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      )
 
-                          <div className="modal-languages">
-                            <h5>Tools and Frameworks Used</h5>
-                            <p>
-                              {projects[0].tools}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>)
+
       row.push(<div className="col-sm-4">{column}</div>)
       projects.splice(0,1)
 
-      if(row.length%3 == 0 || projects.length == 0){
+      if(row.length%3 === 0 || projects.length === 0){
         output.push(<div className="row">{row}</div>)
         row = []
       }

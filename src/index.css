@@ -46,7 +46,7 @@ body {
 
 #projects{
   margin-top: 3.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .project-image{
@@ -54,6 +54,14 @@ body {
   width: 290px;
   height: 195px;
   cursor: pointer;
+}
+
+.project-square{
+  transition: all .3s ease-in-out;
+}
+
+.project-square:hover{
+  transform: scale(1.1);
 }
 
 .project-title{
@@ -64,18 +72,65 @@ body {
 }
 
 .modal-img{
-  border-radius: 0.5rem;
-  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-top: 2.5rem;
+  width: 35%;
 }
 
-.modal-description{
-  margin-top: 1rem;
+.modal-p-container{
+  width: 35%;
+}
+
+.modal-p{
+  background-color: white;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px #e1e4e8 solid!important;
+  border-bottom-width: 1px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: rgb(225, 228, 232) !important;
+}
+
+.modal-h{
   font-size: 1.25rem;
 }
 
+.modal-description{
+  font-size: 1.15rem;
+}
+
+.project-link:hover{
+  text-decoration: none;  
+}
+
+.modal-bottom{
+  border-bottom: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.modal-img:hover, .modal-description:hover, .modal-p:hover{
+  cursor: default;
+}
+
+.project-modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1050; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.project-modal:hover{
+  cursor: pointer;
+}
+
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 4rem; /* Set the fixed height of the footer here */
   line-height:4rem; /* Vertically center the text there */
