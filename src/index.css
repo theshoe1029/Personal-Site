@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kosugi+Maru');
+@import url('https://fonts.googleapis.com/css?family=Muli');
 
 body {
   margin: 0;
@@ -65,7 +65,7 @@ body {
 }
 
 .project-title{
-  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: 1.65rem;
   margin-top: 0.5rem;
   margin-bottom: 2.5rem;
@@ -93,6 +93,7 @@ body {
 }
 
 .modal-h{
+  font-family: 'Muli', sans-serif;
   font-size: 1.25rem;
 }
 
@@ -100,13 +101,12 @@ body {
   font-size: 1.15rem;
 }
 
-.project-link:hover{
-  text-decoration: none;  
+.project-link{
+  text-align: center;
 }
 
-.modal-bottom{
-  border-bottom: none;
-  border-radius: 0 0 0.5rem 0.5rem;
+.project-link:hover{
+  text-decoration: none;
 }
 
 .modal-img:hover, .modal-description:hover, .modal-p:hover{
@@ -128,6 +128,11 @@ body {
 
 .project-modal:hover{
   cursor: pointer;
+}
+
+.modal-bottom{
+  border-bottom: none;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 footer {

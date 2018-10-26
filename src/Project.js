@@ -54,25 +54,20 @@ var projects = [
   }
 ]
 
-var selectedId = null
-
 class Project extends React.Component {
 
   openModal = (id) => {
     document.getElementById(id).style.display="block"
-    selectedId = id
 
     $(document).keyup(function(e){
        if (e.keyCode === 27) {
          document.getElementById(id).style.display="none"
-         selectedId = null
       }
     });
   }
 
   closeModal = (id) => {
     document.getElementById(id).style.display="none"
-    selectedId = null
   }
 
   createProjects = () =>{
@@ -82,6 +77,33 @@ class Project extends React.Component {
     while (projects.length > 0){
       var column = []
       var project = projects[0]
+
+      var projectLinks = null
+      if (project.projectLink != null && project.codeLink != null) {
+        projectLinks =
+          <div className="modal-bottom modal-p mx-auto text-center">
+            <div className = "row">
+              <div className = "left-link col-md-6 project-link">
+                <a className="project-link" href={project.projectLink}>View Project</a>
+              </div>
+              <div className = "col-md-6 code-link">
+                <a className="project-link" href={project.codeLink}>Github Repository</a>
+              </div>
+            </div>
+          </div>
+      }
+      else if(project.projectLink != null && project.codeLink == null){
+        projectLinks =
+        <div className="modal-bottom modal-p mx-auto text-center">
+          <a className="project-link" href={project.projectLink}>View Project</a>
+        </div>
+      }
+      else{
+        projectLinks =
+         <div className="modal-bottom modal-p mx-auto text-center">
+          <a className="project-link" href={project.codeLink}>Github Repository</a>
+         </div>
+      }
 
       column.push(
         <div className="project-square" onClick={this.openModal.bind(this, project.id)}>
@@ -94,10 +116,11 @@ class Project extends React.Component {
         <div className="project-modal" id={project.id} onClick={this.closeModal.bind(this, project.id)}>
           <div className="animated zoomIn">
             <div className="mx-auto text-center">
-              <img className="modal-img" src={project.src}></img>
+              <img className="modal-img" src={project.src} alt=""></img>
             </div>
             <div className="modal-p-container mx-auto">
               <p className="modal-p modal-description mx-auto">
+                <span className="modal-h text-muted">Description</span><br/>
                 {project.description}
               </p>
             </div>
@@ -114,9 +137,7 @@ class Project extends React.Component {
               </p>
             </div>
             <div className="modal-p-container mx-auto">
-              <p className="modal-bottom modal-p mx-auto">
-                <a className="project-link" href={project.projectLink}>{project.projectLink}</a>
-              </p>
+              {projectLinks}
             </div>
           </div>
         </div>
