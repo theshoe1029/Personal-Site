@@ -170,7 +170,12 @@ footer i{
     transform: none;
   }
 
-  .modal-img, .modal-p-container{
+  .modal-p-container{
+    width: 90%;
+  }
+
+  .modal-img {
+    margin-top: 1rem;
     width: 90%;
   }
 
