@@ -146,3 +146,47 @@ footer i{
   font-size: 2.25rem;
   padding: 0 1rem;
 }
+
+.sm-view {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #projects{
+    margin-top: 2.5rem !important;
+    margin-bottom: 2.5rem !important;
+  }
+
+  .project-title{
+    text-align: center;
+  }
+
+  .project-image {
+    display: block;
+    margin: auto;
+  }
+
+  .project-square:hover{
+    transform: none;
+  }
+
+  .modal-img, .modal-p-container{
+    width: 90%;
+  }
+
+  .code-link {
+    width: 50%
+  }
+
+  .project-link {
+    width: 50%;
+  }
+
+  .sm-view {
+    display: inline-block;
+  }
+
+  .lg-view {
+    display: none;
+  }
+}

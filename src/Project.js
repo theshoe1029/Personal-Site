@@ -87,7 +87,8 @@ class Project extends React.Component {
                 <a className="project-link" href={project.projectLink}>View Project</a>
               </div>
               <div className = "col-md-6 code-link">
-                <a className="project-link" href={project.codeLink}>Github Repository</a>
+                <span class="lg-view"><a className="project-link" href={project.codeLink}>Github Repository</a></span>
+                <span class="sm-view"><a className="project-link" href={project.codeLink}>Github</a></span>                
               </div>
             </div>
           </div>
@@ -107,7 +108,7 @@ class Project extends React.Component {
 
       column.push(
         <div className="project-square" onClick={this.openModal.bind(this, project.id)}>
-          <img className="project-image text-center" data-toggle="modal" src={project.src} id={project.id+"-image"} alt=""></img>
+          <img className="project-image" data-toggle="modal" src={project.src} id={project.id+"-image"} alt=""></img>
           <p className="project-title">{project.title}</p>
         </div>
       )
