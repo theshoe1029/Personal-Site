@@ -7,10 +7,10 @@ var projects = [
     title: "Hype Shark",
     src: "/images/hype-shark.png",
     description: "Hype Shark is an affordable bot that allows users to buy shoes that are in high demand.",
-    projectLink: "https://www.hypeshark.net",
+    projectLink: "http://www.hypeshark.net",
     codeLink: null,
     languages: "CSS, HTML, JavaScript, Python",
-    tools: "Electron, Express, Heroku, MongoDB, Nightmare.js, Selenium"
+    tools: "Electron, Express, Heroku, MongoDB, Nightmare.js, Selenium, Stripe"
   },
   {
     id: "circuitry",
@@ -30,7 +30,7 @@ var projects = [
     projectLink: null,
     codeLink: "https://github.com/theriley106/capital-one-vocal-identification",
     languages: "CSS, HTML, JavaScript, Python",
-    tools: "Beautiful Soup, Express, Flask"
+    tools: "Beautiful Soup, Express, Flask, Node.js"
   },
   {
     id: "power-wheels",
@@ -39,8 +39,8 @@ var projects = [
     description: "For this project I worked with Polygon Robotics to develop an autonomous toy car for the Pittsburgh Maker Faire.",
     projectLink: "https://youtu.be/P3KU7waaMcw",
     codeLink: "https://github.com/theshoe1029/Power-Wheels-Team",
-    languages: "Arduino, Python",
-    tools: "3D Printer, Laser Cutter, Lidar, PyGame"
+    languages: "Arduino, JavaScript, Python",
+    tools: "3D Printer, Laser Cutter, Lidar, Node.js, PyGame, Socket.io"
   },
   {
     id: "dispatched",
@@ -88,7 +88,7 @@ class Project extends React.Component {
               </div>
               <div className = "col-md-6 code-link">
                 <span class="lg-view"><a className="project-link" href={project.codeLink}>Github Repository</a></span>
-                <span class="sm-view"><a className="project-link" href={project.codeLink}>Github</a></span>                
+                <span class="sm-view"><a className="project-link" href={project.codeLink}>Github</a></span>
               </div>
             </div>
           </div>
