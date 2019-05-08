@@ -4,7 +4,7 @@ var $ = require('jquery')
 var projects = [
   {
     id: "outer-space",
-    title: "Outer Space",
+    title: "Outer Space",    
     src: "/images/outer-space.png",
     description: "Outer space is a social network developed as the final project for Rice class COMP 431 - Web Development.",
     projectLink: "https://outer-space-frontend-final.surge.sh",
