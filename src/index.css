@@ -1,136 +1,139 @@
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url("https://fonts.googleapis.com/css?family=Muli");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-#resume-link{
+#resume-link {
   margin: 0;
   padding: 0;
 }
 
-#resume-link:hover{
+#resume-link:hover {
   text-decoration: none;
 }
 
-#navigation{
+#navigation {
   color: white;
   padding: 0.85rem 5rem;
 }
 
-#navigation h2{
+#navigation h2 {
   display: inline-block;
 }
 
-#navigation p{
+#navigation p {
   margin: 0;
   cursor: pointer;
 }
 
-#navigation a, #navigation p{
+#navigation a,
+#navigation p {
   text-align: center;
   font-size: 1.25rem;
   color: inherit;
 }
 
-#navigation a:hover{
+#navigation a:hover {
   text-decoration: none;
 }
 
-#projects-header{
+#projects-header {
   text-align: center;
   margin-top: 1.5rem;
 }
 
-#projects{
-  margin-top: 3.5rem;
+#projects {
+  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
-.project-image{
+.project-image {
   border-radius: 0.5rem;
   width: 290px;
   height: 195px;
   cursor: pointer;
 }
 
-.project-square{
-  transition: all .3s ease-in-out;
+.project-square {
+  transition: all 0.3s ease-in-out;
 }
 
-.project-square:hover{
+.project-square:hover {
   transform: scale(1.1);
 }
 
-.project-title{
-  font-family: 'Muli', sans-serif;
+.project-title {
+  font-family: "Muli", sans-serif;
   font-size: 1.65rem;
   margin-top: 0.5rem;
   margin-bottom: 2.5rem;
 }
 
-.modal-img{
+.modal-img {
   border-radius: 0.5rem 0.5rem 0 0;
   margin-top: 2.5rem;
   width: 35%;
 }
 
-.modal-p-container{
+.modal-p-container {
   width: 35%;
 }
 
-.modal-p{
+.modal-p {
   background-color: white;
   font-size: 1rem;
   padding: 1rem 1.5rem;
   margin-bottom: 0;
-  border-bottom: 1px #e1e4e8 solid!important;
+  border-bottom: 1px #e1e4e8 solid !important;
   border-bottom-width: 1px !important;
   border-bottom-style: solid !important;
   border-bottom-color: rgb(225, 228, 232) !important;
 }
 
-.modal-h{
-  font-family: 'Muli', sans-serif;
+.modal-h {
+  font-family: "Muli", sans-serif;
   font-size: 1.25rem;
 }
 
-.modal-description{
+.modal-description {
   font-size: 1.15rem;
 }
 
-.project-link{
+.project-link {
   text-align: center;
 }
 
-.project-link:hover{
+.project-link:hover {
   text-decoration: none;
 }
 
-.modal-img:hover, .modal-description:hover, .modal-p:hover{
+.modal-img:hover,
+.modal-description:hover,
+.modal-p:hover {
   cursor: default;
 }
 
 .project-modal {
-    display: none;
-    position: fixed; /* Stay in place */
-    z-index: 1050; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1050; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-.project-modal:hover{
+.project-modal:hover {
   cursor: pointer;
 }
 
-.modal-bottom{
+.modal-bottom {
   border-bottom: none;
   border-radius: 0 0 0.5rem 0.5rem;
 }
@@ -138,11 +141,11 @@ body {
 footer {
   width: 100%;
   height: 4rem; /* Set the fixed height of the footer here */
-  line-height:4rem; /* Vertically center the text there */
+  line-height: 4rem; /* Vertically center the text there */
   text-align: center;
 }
 
-footer i{
+footer i {
   font-size: 2.25rem;
   padding: 0 1rem;
 }
@@ -152,12 +155,12 @@ footer i{
 }
 
 @media only screen and (max-width: 600px) {
-  #projects{
+  #projects {
     margin-top: 2.5rem !important;
     margin-bottom: 2.5rem !important;
   }
 
-  .project-title{
+  .project-title {
     text-align: center;
   }
 
@@ -166,11 +169,11 @@ footer i{
     margin: auto;
   }
 
-  .project-square:hover{
+  .project-square:hover {
     transform: none;
   }
 
-  .modal-p-container{
+  .modal-p-container {
     width: 90%;
   }
 
@@ -180,7 +183,7 @@ footer i{
   }
 
   .code-link {
-    width: 50%
+    width: 50%;
   }
 
   .project-link {

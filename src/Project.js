@@ -3,13 +3,23 @@ var $ = require('jquery')
 
 var projects = [
   {
+    id: "outer-space",
+    title: "Outer Space",
+    src: "/images/outer-space.png",
+    description: "Outer space is a social network developed as the final project for Rice class COMP 431 - Web Development.",
+    projectLink: "https://outer-space-frontend-final.surge.sh",
+    codeLink: null,
+    languages: "JavaScript, HTML, CSS",
+    tools: "Angular, Express, Node.js, MongoDB, Passport, Cloudinary"
+  },
+  {
     id: "hype-shark",
     title: "Hype Shark",
     src: "/images/hype-shark.png",
     description: "Hype Shark is an affordable bot that allows users to buy shoes that are in high demand.",
     projectLink: "http://www.hypeshark.net",
     codeLink: null,
-    languages: "CSS, HTML, JavaScript, Python",
+    languages: "JavaScript, Python, HTML, CSS",
     tools: "Electron, Express, Heroku, MongoDB, Nightmare.js, Selenium, Stripe"
   },
   {
@@ -19,7 +29,7 @@ var projects = [
     description: "Circuitry is a game that allows students to review their knowledge of electricity.",
     projectLink: "https://circuit-game.cs2n.org",
     codeLink: null,
-    languages: "HTML, JavaScript",
+    languages: "JavaScript, HTML",
     tools: "CouchDB, Docker, Express, Phaser"
   },
   {
@@ -29,14 +39,14 @@ var projects = [
     description: "Hello World is an app that translates customer service calls in real time.",
     projectLink: null,
     codeLink: "https://github.com/theriley106/capital-one-vocal-identification",
-    languages: "CSS, HTML, JavaScript, Python",
+    languages: "JavaScript, Python, HTML, CSS",
     tools: "Beautiful Soup, Express, Flask, Node.js"
   },
   {
     id: "power-wheels",
     title: "Power Wheels",
     src: "/images/power-wheels.png",
-    description: "For this project I worked with Polygon Robotics to develop an autonomous toy car for the Pittsburgh Maker Faire.",
+    description: "Power Wheels is an autonomous toy car designed to navigate a maze.",
     projectLink: "https://youtu.be/P3KU7waaMcw",
     codeLink: "https://github.com/theshoe1029/Power-Wheels-Team",
     languages: "Arduino, JavaScript, Python",
@@ -49,7 +59,7 @@ var projects = [
     description: "Dispatched is a website for visualizing emergency call data.",
     projectLink: null,
     codeLink: "https://github.com/theshoe1029/Dispatched",
-    languages: "CSS, HTML, JavaScript",
+    languages: "JavaScript, HTML, CSS",
     tools: "Chart.js, D3.js, Google Maps API"
   }
 ]
