@@ -57,7 +57,7 @@ var projects = [
     title: "Dispatched",
     src: "/images/dispatched.png",
     description: "Dispatched is a website for visualizing emergency call data.",
-    projectLink: null,
+    projectLink: "http://dispatched.surge.sh",
     codeLink: "https://github.com/theshoe1029/Dispatched",
     languages: "JavaScript, HTML, CSS",
     tools: "Chart.js, D3.js, Google Maps API"
