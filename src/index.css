@@ -198,4 +198,8 @@ footer i {
   .lg-view {
     display: none;
   }
+
+  footer {
+    position: relative;
+  }
 }
