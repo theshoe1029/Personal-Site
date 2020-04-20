@@ -30,7 +30,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <a id="resume-link" href="/Resume.pdf" target="_">
+        <a id="resume-link" href="https://drive.google.com/file/d/1Yc14-pB_1-PVFkxMnM71S74sO6Z2bGUr/view?usp=sharing" target="_">
           <nav className="navbar" id="navigation" style={navStyle}>
             <h2 className="mx-auto text-center">Adam Schueller</h2>
           </nav>
@@ -42,7 +42,7 @@ class App extends React.Component {
 
         <footer className="bg-light" id="footer">
           <div id="footer-div">
-            <a href="/Resume.pdf" style={linkStyle}><i className="fas fa-file-alt align-middle"></i></a>
+            <a href="https://drive.google.com/file/d/1Yc14-pB_1-PVFkxMnM71S74sO6Z2bGUr/view?usp=sharing" style={linkStyle}><i className="fas fa-file-alt align-middle"></i></a>
             <a href="mailto:as174@rice.edu" style={linkStyle}><i className="far fa-envelope align-middle"></i></a>
             <a href="https://www.linkedin.com/in/adam-schueller/" style={linkStyle}><i className="fab fa-linkedin-in align-middle"></i></a>
             <a href="https://github.com/theshoe1029" style={linkStyle}><i className="fab fa-github-alt align-middle"></i></a>

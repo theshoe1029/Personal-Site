@@ -6,7 +6,7 @@ var projects = [
     id: "outer-space",
     title: "Outer Space",
     src: "/images/outer-space.png",
-    description: "Outer space is a social network developed as the final project for COMP 431 - Web Development.",
+    description: "Outer Space is a social network developed as the final project for COMP 431 - Web Development.",
     projectLink: "https://outer-space-frontend-final.surge.sh",
     codeLink: null,
     languages: "JavaScript, HTML, CSS",
