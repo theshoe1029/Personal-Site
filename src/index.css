@@ -3,6 +3,8 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
+  color: white;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -13,6 +15,10 @@ body {
 
 #resume-link:hover {
   text-decoration: none;
+}
+
+#resume-link img {
+  width: 550px;
 }
 
 #navigation {
@@ -46,7 +52,7 @@ body {
 }
 
 #projects {
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -66,10 +72,10 @@ body {
 }
 
 .project-title {
-  font-family: "Muli", sans-serif;
   font-size: 1.5rem;
   margin-top: 0.5rem;
   margin-bottom: 2.5rem;
+  color: white;
 }
 
 .modal-img {
@@ -91,6 +97,7 @@ body {
   border-bottom-width: 1px !important;
   border-bottom-style: solid !important;
   border-bottom-color: rgb(225, 228, 232) !important;
+  color: black;
 }
 
 .modal-h {
@@ -149,6 +156,11 @@ footer {
 footer i {
   font-size: 2.25rem;
   padding: 0 1rem;
+}
+
+footer a, footer a:hover {
+  color: #00A600;
+  margin-right: 20px;
 }
 
 .sm-view {
